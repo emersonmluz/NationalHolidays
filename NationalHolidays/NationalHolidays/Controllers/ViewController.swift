@@ -12,47 +12,20 @@ class ViewController: UIViewController {
    
     @IBOutlet weak var yearChosseTableView: UITableView!
     
+    var calendar: [NationalHolidays] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         yearChosseTableView.dataSource = self
-        
-        let url = URL(string: "https://brasilapi.com.br/api/feriados/v1/2022")
-        
-        if let url = url {
-            
-            var request = URLRequest(url: url)
-            request.httpMethod = "GET"
-            request.addValue("aplication/json", forHTTPHeaderField: "Content-Type")
-            
-            let session = URLSession.shared
-            
-            let task = session.dataTask(with: request) { data, response, error in
-                if let data = data, error == nil {
-                    
-                    do {
-                        let dateFormat = DateFormatter()
-                        dateFormat.dateFormat = "yyyy-MM-dd"
-                        
-                        let decoder = JSONDecoder()
-                        decoder.dateDecodingStrategy = .formatted(dateFormat)
-                        
-                        let holidays = try decoder.decode([NationalHolidays].self, from: data)
-                        
-                    } catch let error {
-                        print(error)
-                    }
-                }
-            }
-            task.resume()
+        calendar = HolidaysCalendar.read(year: "2022")
             // Do any additional setup after loading the view.
-        }
     }
 }
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 200
+        return 91
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
