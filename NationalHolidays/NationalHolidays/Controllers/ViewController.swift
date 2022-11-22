@@ -8,9 +8,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+   
+    @IBOutlet weak var yearChosseTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        yearChosseTableView.dataSource = self
         
         let url = URL(string: "https://brasilapi.com.br/api/feriados/v1/2022")
         
@@ -34,17 +39,28 @@ class ViewController: UIViewController {
                         
                         let holidays = try decoder.decode([NationalHolidays].self, from: data)
                         
-                        for holiday in holidays {
-                            print(holiday)
-                        }
                     } catch let error {
                         print(error)
                     }
                 }
             }
             task.resume()
+            // Do any additional setup after loading the view.
         }
-        // Do any additional setup after loading the view.
     }
 }
 
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 200
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CellSetup
+        
+        cell.yearListLoad(index: indexPath)
+        return cell
+    }
+    
+    
+}

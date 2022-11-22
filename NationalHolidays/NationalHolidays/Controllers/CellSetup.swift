@@ -11,8 +11,10 @@ class CellSetup: UITableViewCell {
     
     @IBOutlet weak var yearLabel: UILabel!
     
-    func yearListLoad () {
-        yearLabel.text = "2022"
+    var year: [Int] = Array(1945...2145)
+    
+    func yearListLoad (index: IndexPath) {
+        yearLabel.text = String(year[index.row])
     }
     
 }
