@@ -11,16 +11,18 @@ class ViewController: UIViewController {
     
    
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     var calendar: [NationalHolidays]?
+    var year: String = "2023"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        titleLabel.text = "Feriados \(year)"
         tableView.dataSource = self
-//        calendar = HolidaysCalendar.read(year: "2022", tableViewReload: tableView)
         
-        let url = URL(string: "https://brasilapi.com.br/api/feriados/v1/2022")
+        let url = URL(string: "https://brasilapi.com.br/api/feriados/v1/\(year)")
         
         if let url = url {
             

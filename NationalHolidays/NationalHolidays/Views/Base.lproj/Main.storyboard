@@ -39,13 +39,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dia da semana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R94-gd-00k">
-                                                    <rect key="frame" x="86" y="19" width="99" height="17"/>
+                                                    <rect key="frame" x="86" y="17" width="99" height="17"/>
                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
                                                     <color key="textColor" systemColor="systemGrayColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feriado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leg-QU-HVM">
-                                                    <rect key="frame" x="86" y="46" width="208" height="22.5"/>
+                                                    <rect key="frame" x="86" y="44" width="208" height="22.5"/>
                                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -58,7 +58,7 @@
                                                 <constraint firstItem="qnJ-Qz-uhI" firstAttribute="centerY" secondItem="8Cr-UZ-pCg" secondAttribute="centerY" id="cpq-bm-GE2"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="leg-QU-HVM" secondAttribute="trailing" constant="10" id="i5p-ih-oOv"/>
                                                 <constraint firstItem="leg-QU-HVM" firstAttribute="leading" secondItem="qnJ-Qz-uhI" secondAttribute="trailing" constant="10" id="p90-uz-cVM"/>
-                                                <constraint firstItem="R94-gd-00k" firstAttribute="top" secondItem="8Cr-UZ-pCg" secondAttribute="topMargin" constant="8" id="zje-X8-IJd"/>
+                                                <constraint firstItem="R94-gd-00k" firstAttribute="top" secondItem="8Cr-UZ-pCg" secondAttribute="topMargin" constant="6" id="zje-X8-IJd"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -82,9 +82,9 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="uAD-Zj-a8y" firstAttribute="centerX" secondItem="Q6K-k0-3q7" secondAttribute="centerX" id="4Ac-np-qb6"/>
+                                    <constraint firstItem="uAD-Zj-a8y" firstAttribute="centerX" secondItem="Q6K-k0-3q7" secondAttribute="centerX" id="Hcw-Hd-RVK"/>
                                     <constraint firstAttribute="height" constant="50" id="qMb-mm-3ka"/>
-                                    <constraint firstItem="uAD-Zj-a8y" firstAttribute="centerY" secondItem="Q6K-k0-3q7" secondAttribute="centerY" id="rxB-K7-1WZ"/>
+                                    <constraint firstItem="uAD-Zj-a8y" firstAttribute="centerY" secondItem="Q6K-k0-3q7" secondAttribute="centerY" id="xJb-Q4-vp4"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -102,6 +102,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="DFu-n6-niw" id="4bf-dt-tc2"/>
+                        <outlet property="titleLabel" destination="uAD-Zj-a8y" id="IxS-uh-oEG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
