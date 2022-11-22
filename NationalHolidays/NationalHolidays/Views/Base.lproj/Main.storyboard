@@ -16,34 +16,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="50" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DFu-n6-niw">
-                                <rect key="frame" x="0.0" y="50" width="320" height="50"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DFu-n6-niw">
+                                <rect key="frame" x="0.0" y="50" width="320" height="518"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="7J6-XH-ahJ"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="e85-DL-Jie" customClass="CellSetup" customModule="NationalHolidays" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="50" width="320" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e85-DL-Jie" id="8Cr-UZ-pCg">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ano" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnJ-Qz-uhI">
-                                                    <rect key="frame" x="138" y="11" width="44.5" height="28"/>
-                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnJ-Qz-uhI" userLabel="Dia">
+                                                    <rect key="frame" x="26" y="12.5" width="50" height="50"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="qnJ-Qz-uhI" secondAttribute="height" multiplier="1:1" id="YlV-P6-4Ig"/>
+                                                        <constraint firstAttribute="width" constant="50" id="eZk-cA-vDs"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="25"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dia da semana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R94-gd-00k">
+                                                    <rect key="frame" x="86" y="19" width="99" height="17"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feriado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leg-QU-HVM">
+                                                    <rect key="frame" x="86" y="41" width="208" height="22.5"/>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="qnJ-Qz-uhI" firstAttribute="centerX" secondItem="8Cr-UZ-pCg" secondAttribute="centerX" id="6sJ-Dc-8dc"/>
-                                                <constraint firstItem="qnJ-Qz-uhI" firstAttribute="centerY" secondItem="8Cr-UZ-pCg" secondAttribute="centerY" id="vGm-OO-qvB"/>
+                                                <constraint firstItem="leg-QU-HVM" firstAttribute="top" secondItem="R94-gd-00k" secondAttribute="bottom" constant="5" id="5ch-7c-aNN"/>
+                                                <constraint firstItem="qnJ-Qz-uhI" firstAttribute="leading" secondItem="8Cr-UZ-pCg" secondAttribute="leadingMargin" constant="10" id="MFI-xh-uoa"/>
+                                                <constraint firstItem="R94-gd-00k" firstAttribute="leading" secondItem="qnJ-Qz-uhI" secondAttribute="trailing" constant="10" id="Udp-f0-9cd"/>
+                                                <constraint firstItem="qnJ-Qz-uhI" firstAttribute="centerY" secondItem="8Cr-UZ-pCg" secondAttribute="centerY" id="cpq-bm-GE2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="leg-QU-HVM" secondAttribute="trailing" constant="10" id="i5p-ih-oOv"/>
+                                                <constraint firstItem="leg-QU-HVM" firstAttribute="leading" secondItem="qnJ-Qz-uhI" secondAttribute="trailing" constant="10" id="p90-uz-cVM"/>
+                                                <constraint firstItem="R94-gd-00k" firstAttribute="top" secondItem="8Cr-UZ-pCg" secondAttribute="topMargin" constant="8" id="zje-X8-IJd"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="yearLabel" destination="qnJ-Qz-uhI" id="gjn-9B-lKS"/>
+                                            <outlet property="dayLabel" destination="qnJ-Qz-uhI" id="7Hg-Zf-SSf"/>
+                                            <outlet property="dayWeekLabel" destination="R94-gd-00k" id="aII-Vp-GH7"/>
+                                            <outlet property="holidayLabel" destination="leg-QU-HVM" id="RYB-wT-b0c"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -70,18 +91,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="DFu-n6-niw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BwT-LZ-O6v"/>
+                            <constraint firstItem="DFu-n6-niw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DC2-Dl-FXS"/>
                             <constraint firstItem="Q6K-k0-3q7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UFA-Su-PHg"/>
-                            <constraint firstItem="DFu-n6-niw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ys2-ow-dJB"/>
-                            <constraint firstItem="DFu-n6-niw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="j6h-Vl-iKf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DFu-n6-niw" secondAttribute="bottom" id="g44-ot-yM7"/>
                             <constraint firstItem="Q6K-k0-3q7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jqH-ho-hzF"/>
-                            <constraint firstItem="DFu-n6-niw" firstAttribute="top" secondItem="Q6K-k0-3q7" secondAttribute="bottom" id="scE-mO-JXv"/>
+                            <constraint firstItem="DFu-n6-niw" firstAttribute="top" secondItem="Q6K-k0-3q7" secondAttribute="bottom" id="kIf-4Y-RYC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q6K-k0-3q7" secondAttribute="trailing" id="vX6-ga-abI"/>
-                            <constraint firstItem="DFu-n6-niw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wFO-QO-LMM"/>
+                            <constraint firstItem="DFu-n6-niw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wLN-zf-ydD"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="yearChosseTableView" destination="DFu-n6-niw" id="4bf-dt-tc2"/>
+                        <outlet property="tableView" destination="DFu-n6-niw" id="4bf-dt-tc2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -92,6 +112,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

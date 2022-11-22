@@ -9,12 +9,15 @@ import UIKit
 
 class CellSetup: UITableViewCell {
     
-    @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var dayWeekLabel: UILabel!
+    @IBOutlet weak var holidayLabel: UILabel!
     
-    var year: [Int] = Array(1960...2050)
-    
-    func yearListLoad (index: IndexPath) {
-        yearLabel.text = String(year[index.row])
+    func showHoliday (base: [NationalHolidays]) {
+        dayLabel.text = "01"
+        dayWeekLabel.text = "segunda"
+        holidayLabel.text = base[0].name
+        print(base)
     }
     
 }
