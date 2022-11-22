@@ -14,6 +14,8 @@
 		EEA80651292D42E500C338A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEA80650292D42E500C338A4 /* Assets.xcassets */; };
 		EEA80654292D42E500C338A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA80652292D42E500C338A4 /* LaunchScreen.storyboard */; };
 		EEA8065F292D435000C338A4 /* NationalHolidays.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA8065E292D435000C338A4 /* NationalHolidays.swift */; };
+		EEA80661292D474700C338A4 /* HolidaysCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA80660292D474700C338A4 /* HolidaysCalendar.swift */; };
+		EEA80663292D532C00C338A4 /* CellSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA80662292D532C00C338A4 /* CellSetup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		EEA80653292D42E500C338A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EEA80655292D42E500C338A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEA8065E292D435000C338A4 /* NationalHolidays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationalHolidays.swift; sourceTree = "<group>"; };
+		EEA80660292D474700C338A4 /* HolidaysCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysCalendar.swift; sourceTree = "<group>"; };
+		EEA80662292D532C00C338A4 /* CellSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSetup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				EEA8064B292D42E400C338A4 /* ViewController.swift */,
+				EEA80662292D532C00C338A4 /* CellSetup.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				EEA8065E292D435000C338A4 /* NationalHolidays.swift */,
+				EEA80660292D474700C338A4 /* HolidaysCalendar.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -166,9 +172,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEA8065F292D435000C338A4 /* NationalHolidays.swift in Sources */,
+				EEA80663292D532C00C338A4 /* CellSetup.swift in Sources */,
 				EEA8064C292D42E400C338A4 /* ViewController.swift in Sources */,
 				EEA80648292D42E400C338A4 /* AppDelegate.swift in Sources */,
 				EEA8064A292D42E400C338A4 /* SceneDelegate.swift in Sources */,
+				EEA80661292D474700C338A4 /* HolidaysCalendar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
