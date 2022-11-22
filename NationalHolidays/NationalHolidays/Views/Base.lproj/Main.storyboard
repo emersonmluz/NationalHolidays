@@ -16,19 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DFu-n6-niw">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DFu-n6-niw">
                                 <rect key="frame" x="0.0" y="50" width="320" height="518"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="e85-DL-Jie" customClass="CellSetup" customModule="NationalHolidays" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="320" height="75"/>
+                                        <rect key="frame" x="0.0" y="50" width="320" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e85-DL-Jie" id="8Cr-UZ-pCg">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnJ-Qz-uhI" userLabel="Dia">
-                                                    <rect key="frame" x="26" y="12.5" width="50" height="50"/>
+                                                    <rect key="frame" x="26" y="15" width="50" height="50"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="qnJ-Qz-uhI" secondAttribute="height" multiplier="1:1" id="YlV-P6-4Ig"/>
@@ -45,14 +45,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feriado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leg-QU-HVM">
-                                                    <rect key="frame" x="86" y="41" width="208" height="22.5"/>
+                                                    <rect key="frame" x="86" y="46" width="208" height="22.5"/>
                                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="leg-QU-HVM" firstAttribute="top" secondItem="R94-gd-00k" secondAttribute="bottom" constant="5" id="5ch-7c-aNN"/>
+                                                <constraint firstItem="leg-QU-HVM" firstAttribute="top" secondItem="R94-gd-00k" secondAttribute="bottom" constant="10" id="5ch-7c-aNN"/>
                                                 <constraint firstItem="qnJ-Qz-uhI" firstAttribute="leading" secondItem="8Cr-UZ-pCg" secondAttribute="leadingMargin" constant="10" id="MFI-xh-uoa"/>
                                                 <constraint firstItem="R94-gd-00k" firstAttribute="leading" secondItem="qnJ-Qz-uhI" secondAttribute="trailing" constant="10" id="Udp-f0-9cd"/>
                                                 <constraint firstItem="qnJ-Qz-uhI" firstAttribute="centerY" secondItem="8Cr-UZ-pCg" secondAttribute="centerY" id="cpq-bm-GE2"/>

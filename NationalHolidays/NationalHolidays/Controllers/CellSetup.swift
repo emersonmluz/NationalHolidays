@@ -13,11 +13,16 @@ class CellSetup: UITableViewCell {
     @IBOutlet weak var dayWeekLabel: UILabel!
     @IBOutlet weak var holidayLabel: UILabel!
     
-    func showHoliday (base: [NationalHolidays]) {
-        dayLabel.text = "01"
-        dayWeekLabel.text = "segunda"
-        holidayLabel.text = base[0].name
-        print(base)
+    var dateFormatInDayOfTheWeek = DateFormatter()
+    var dateFormatDay = DateFormatter()
+    
+    func showHoliday (base: [NationalHolidays], index: Int) {
+        dateFormatInDayOfTheWeek.dateFormat = "EEEE"
+        dateFormatDay.dateFormat = "dd"
+        
+        dayLabel.text = dateFormatDay.string(from: base[index].date)
+        dayWeekLabel.text = dateFormatInDayOfTheWeek.string(from: base[index].date)
+        holidayLabel.text = base[index].name
     }
     
 }
