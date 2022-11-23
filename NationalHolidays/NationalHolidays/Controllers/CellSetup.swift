@@ -17,6 +17,10 @@ class CellSetup: UITableViewCell {
     var dateFormatDay = DateFormatter()
     
     func showHoliday (base: [NationalHolidays], index: Int) {
+        
+        dayLabel.layer.cornerRadius = 10
+        dayLabel.layer.masksToBounds = true
+        
         dateFormatInDayOfTheWeek.dateFormat = "EEEE"
         dateFormatDay.dateFormat = "dd"
         

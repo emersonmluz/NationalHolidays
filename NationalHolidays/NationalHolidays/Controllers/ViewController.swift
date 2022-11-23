@@ -12,17 +12,17 @@ class ViewController: UIViewController {
    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var nextYearButton: UIButton!
     
     var calendar: [NationalHolidays]?
-    var year: String = "2023"
+    var year: Int = 2022
+    var url = URL(string: "https://brasilapi.com.br/api/feriados/v1/2022")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         titleLabel.text = "Feriados \(year)"
         tableView.dataSource = self
-        
-        let url = URL(string: "https://brasilapi.com.br/api/feriados/v1/\(year)")
         
         if let url = url {
             
@@ -57,6 +57,22 @@ class ViewController: UIViewController {
         }
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func nextYearButtonClick(_ sender: UIButton) {
+        year += 1
+        chooseYear()
+    }
+    
+    @IBAction func previousYearButtonClick(_ sender: UIButton) {
+        year -= 1
+        chooseYear()
+    }
+    
+    func chooseYear () {
+        titleLabel.text = "Feriados \(year)"
+        url = URL(string: "https://brasilapi.com.br/api/feriados/v1/\(year)")
+    }
+    
 }
 
 extension ViewController: UITableViewDataSource {

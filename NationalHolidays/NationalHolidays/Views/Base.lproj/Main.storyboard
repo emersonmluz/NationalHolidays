@@ -28,7 +28,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnJ-Qz-uhI" userLabel="Dia">
-                                                    <rect key="frame" x="26" y="15" width="50" height="50"/>
+                                                    <rect key="frame" x="16" y="15" width="50" height="50"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="qnJ-Qz-uhI" secondAttribute="height" multiplier="1:1" id="YlV-P6-4Ig"/>
@@ -39,13 +39,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dia da semana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R94-gd-00k">
-                                                    <rect key="frame" x="86" y="17" width="99" height="17"/>
+                                                    <rect key="frame" x="76" y="17" width="99" height="17"/>
                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
                                                     <color key="textColor" systemColor="systemGrayColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feriado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leg-QU-HVM">
-                                                    <rect key="frame" x="86" y="44" width="208" height="22.5"/>
+                                                    <rect key="frame" x="76" y="44" width="218" height="22.5"/>
                                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -53,7 +53,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="leg-QU-HVM" firstAttribute="top" secondItem="R94-gd-00k" secondAttribute="bottom" constant="10" id="5ch-7c-aNN"/>
-                                                <constraint firstItem="qnJ-Qz-uhI" firstAttribute="leading" secondItem="8Cr-UZ-pCg" secondAttribute="leadingMargin" constant="10" id="MFI-xh-uoa"/>
+                                                <constraint firstItem="qnJ-Qz-uhI" firstAttribute="leading" secondItem="8Cr-UZ-pCg" secondAttribute="leadingMargin" id="MFI-xh-uoa"/>
                                                 <constraint firstItem="R94-gd-00k" firstAttribute="leading" secondItem="qnJ-Qz-uhI" secondAttribute="trailing" constant="10" id="Udp-f0-9cd"/>
                                                 <constraint firstItem="qnJ-Qz-uhI" firstAttribute="centerY" secondItem="8Cr-UZ-pCg" secondAttribute="centerY" id="cpq-bm-GE2"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="leg-QU-HVM" secondAttribute="trailing" constant="10" id="i5p-ih-oOv"/>
@@ -79,10 +79,44 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6q0-Zs-Szb">
+                                        <rect key="frame" x="234" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="6q0-Zs-Szb" secondAttribute="height" multiplier="1:1" id="A3s-WR-1yb"/>
+                                            <constraint firstAttribute="width" constant="50" id="AQ7-xg-v7f"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="+">
+                                            <fontDescription key="titleFontDescription" name="Arial-BoldMT" family="Arial" pointSize="40"/>
+                                            <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="nextYearButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oAx-uH-7i7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwA-Uw-rBI">
+                                        <rect key="frame" x="46" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="O0A-1A-mkU"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="-">
+                                            <fontDescription key="titleFontDescription" name="Arial-BoldMT" family="Arial" pointSize="45"/>
+                                            <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="previousYearButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nPa-7g-6Dz"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="6q0-Zs-Szb" firstAttribute="leading" secondItem="uAD-Zj-a8y" secondAttribute="trailing" constant="25" id="3Zg-ei-j6G"/>
+                                    <constraint firstItem="cwA-Uw-rBI" firstAttribute="top" secondItem="Q6K-k0-3q7" secondAttribute="top" id="5sq-fz-Acr"/>
                                     <constraint firstItem="uAD-Zj-a8y" firstAttribute="centerX" secondItem="Q6K-k0-3q7" secondAttribute="centerX" id="Hcw-Hd-RVK"/>
+                                    <constraint firstItem="6q0-Zs-Szb" firstAttribute="centerY" secondItem="Q6K-k0-3q7" secondAttribute="centerY" id="MTh-Zd-Wyd"/>
+                                    <constraint firstItem="uAD-Zj-a8y" firstAttribute="leading" secondItem="cwA-Uw-rBI" secondAttribute="trailing" constant="25" id="QCY-Tt-aOT"/>
+                                    <constraint firstItem="cwA-Uw-rBI" firstAttribute="width" secondItem="cwA-Uw-rBI" secondAttribute="height" multiplier="1:1" id="iXW-uf-V0z"/>
                                     <constraint firstAttribute="height" constant="50" id="qMb-mm-3ka"/>
                                     <constraint firstItem="uAD-Zj-a8y" firstAttribute="centerY" secondItem="Q6K-k0-3q7" secondAttribute="centerY" id="xJb-Q4-vp4"/>
                                 </constraints>
