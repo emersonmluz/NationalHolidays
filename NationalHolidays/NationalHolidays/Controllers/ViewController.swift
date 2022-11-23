@@ -12,7 +12,6 @@ class ViewController: UIViewController {
    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var nextYearButton: UIButton!
     
     var calendar: [NationalHolidays]?
     var year: Int = 2022
@@ -24,6 +23,28 @@ class ViewController: UIViewController {
         titleLabel.text = "Feriados \(year)"
         tableView.dataSource = self
         
+        loadCalendar()
+        // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func nextYearButtonClick(_ sender: UIButton) {
+        year += 1
+        chooseYear()
+        loadCalendar()
+    }
+    
+    @IBAction func previousYearButtonClick(_ sender: UIButton) {
+        year -= 1
+        chooseYear()
+        loadCalendar()
+    }
+    
+    func chooseYear () {
+        titleLabel.text = "Feriados \(year)"
+        url = URL(string: "https://brasilapi.com.br/api/feriados/v1/\(year)")
+    }
+    
+    func loadCalendar () {
         if let url = url {
             
             var request = URLRequest(url: url)
@@ -55,22 +76,6 @@ class ViewController: UIViewController {
             }
             task.resume()
         }
-        // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func nextYearButtonClick(_ sender: UIButton) {
-        year += 1
-        chooseYear()
-    }
-    
-    @IBAction func previousYearButtonClick(_ sender: UIButton) {
-        year -= 1
-        chooseYear()
-    }
-    
-    func chooseYear () {
-        titleLabel.text = "Feriados \(year)"
-        url = URL(string: "https://brasilapi.com.br/api/feriados/v1/\(year)")
     }
     
 }
