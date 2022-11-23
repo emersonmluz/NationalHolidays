@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				EEA8064B292D42E400C338A4 /* ViewController.swift */,
-				EEA80662292D532C00C338A4 /* CellSetup.swift */,
+				EE2BBA8A292E9306006632B2 /* ScreenLoad.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -87,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				EEA8064D292D42E400C338A4 /* Main.storyboard */,
+				EEA80662292D532C00C338A4 /* CellSetup.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -95,7 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				EEA8065E292D435000C338A4 /* NationalHolidays.swift */,
-				EE2BBA8A292E9306006632B2 /* ScreenLoad.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
