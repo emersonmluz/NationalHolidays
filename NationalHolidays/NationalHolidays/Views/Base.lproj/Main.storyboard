@@ -39,25 +39,37 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dia da semana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R94-gd-00k">
-                                                    <rect key="frame" x="76" y="17" width="99" height="17"/>
+                                                    <rect key="frame" x="91" y="17" width="99" height="17"/>
                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
                                                     <color key="textColor" systemColor="systemGrayColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feriado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leg-QU-HVM">
-                                                    <rect key="frame" x="76" y="44" width="218" height="22.5"/>
+                                                    <rect key="frame" x="91" y="44" width="203" height="22.5"/>
                                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAN" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYg-fg-GXs">
+                                                    <rect key="frame" x="71" y="12.5" width="10" height="55"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="55" id="WpX-uT-VU2"/>
+                                                        <constraint firstAttribute="width" constant="10" id="aR0-Ky-dwf"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="leg-QU-HVM" firstAttribute="top" secondItem="R94-gd-00k" secondAttribute="bottom" constant="10" id="5ch-7c-aNN"/>
+                                                <constraint firstItem="R94-gd-00k" firstAttribute="leading" secondItem="sYg-fg-GXs" secondAttribute="trailing" constant="10" id="DG9-0K-Vvx"/>
                                                 <constraint firstItem="qnJ-Qz-uhI" firstAttribute="leading" secondItem="8Cr-UZ-pCg" secondAttribute="leadingMargin" id="MFI-xh-uoa"/>
-                                                <constraint firstItem="R94-gd-00k" firstAttribute="leading" secondItem="qnJ-Qz-uhI" secondAttribute="trailing" constant="10" id="Udp-f0-9cd"/>
+                                                <constraint firstItem="leg-QU-HVM" firstAttribute="leading" secondItem="sYg-fg-GXs" secondAttribute="trailing" constant="10" id="Tr7-Yk-Dq9"/>
                                                 <constraint firstItem="qnJ-Qz-uhI" firstAttribute="centerY" secondItem="8Cr-UZ-pCg" secondAttribute="centerY" id="cpq-bm-GE2"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="leg-QU-HVM" secondAttribute="trailing" constant="10" id="i5p-ih-oOv"/>
-                                                <constraint firstItem="leg-QU-HVM" firstAttribute="leading" secondItem="qnJ-Qz-uhI" secondAttribute="trailing" constant="10" id="p90-uz-cVM"/>
+                                                <constraint firstItem="sYg-fg-GXs" firstAttribute="centerY" secondItem="8Cr-UZ-pCg" secondAttribute="centerY" id="m9f-LK-22F"/>
+                                                <constraint firstItem="sYg-fg-GXs" firstAttribute="leading" secondItem="qnJ-Qz-uhI" secondAttribute="trailing" constant="5" id="tS9-cm-QqB"/>
                                                 <constraint firstItem="R94-gd-00k" firstAttribute="top" secondItem="8Cr-UZ-pCg" secondAttribute="topMargin" constant="6" id="zje-X8-IJd"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -65,6 +77,7 @@
                                             <outlet property="dayLabel" destination="qnJ-Qz-uhI" id="7Hg-Zf-SSf"/>
                                             <outlet property="dayWeekLabel" destination="R94-gd-00k" id="aII-Vp-GH7"/>
                                             <outlet property="holidayLabel" destination="leg-QU-HVM" id="RYB-wT-b0c"/>
+                                            <outlet property="monthLabel" destination="sYg-fg-GXs" id="o3o-O2-mHf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -141,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="83" y="-2"/>
+            <point key="canvasLocation" x="82.5" y="-2.112676056338028"/>
         </scene>
     </scenes>
     <resources>
