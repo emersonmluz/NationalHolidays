@@ -13,15 +13,14 @@ class CellSetup: UITableViewCell {
     @IBOutlet weak var dayWeekLabel: UILabel!
     @IBOutlet weak var holidayLabel: UILabel!
     @IBOutlet weak var monthLabel: UILabel!
-    
+    @IBOutlet weak var miniCalendarView: UIView!
     var dateFormatInDayOfTheWeek = DateFormatter()
     var dateFormatDay = DateFormatter()
     var dateFormatMonth = DateFormatter()
     
     func showHoliday (base: [NationalHolidays], index: Int) {
         
-        dayLabel.layer.cornerRadius = 10
-        dayLabel.layer.masksToBounds = true
+        miniCalendarView.layer.cornerRadius = 5
         
         dateFormatInDayOfTheWeek.dateFormat = "EEEE"
         dateFormatDay.dateFormat = "dd"
