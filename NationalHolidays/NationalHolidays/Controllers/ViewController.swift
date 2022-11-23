@@ -65,13 +65,9 @@ class ViewController: UIViewController {
                         
                         self.calendar = try decoder.decode([NationalHolidays].self, from: data)
                         
-                        self.tableView.alpha = 0.25
-                        self.tableView.isUserInteractionEnabled = false
-                        
                         DispatchQueue.main.async {
                             self.tableView.reloadData()
-                            self.tableView.alpha = 1
-                            self.tableView.isUserInteractionEnabled = true
+                            ScreenLoad.stopLoad(self.tableView)
                         }
                         
                     } catch let error {
@@ -80,6 +76,7 @@ class ViewController: UIViewController {
                 }
             }
             task.resume()
+            ScreenLoad.startLoad(self.tableView)
         }
     }
     
