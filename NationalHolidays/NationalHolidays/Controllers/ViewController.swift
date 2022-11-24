@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     
     var calendar: [NationalHolidays]?
     var year: Int = 2022
-    var url = URL(string: "https://brasilapi.com.br/api/feriados/v1/2022")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,10 +40,11 @@ class ViewController: UIViewController {
     
     func chooseYear () {
         titleLabel.text = "Feriados \(year)"
-        url = URL(string: "https://brasilapi.com.br/api/feriados/v1/\(year)")
     }
     
     func loadCalendar () {
+        var url = URL(string: "https://brasilapi.com.br/api/feriados/v1/\(year)")
+        
         if let url = url {
             
             var request = URLRequest(url: url)
