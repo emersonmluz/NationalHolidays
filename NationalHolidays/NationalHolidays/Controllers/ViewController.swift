@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         
         titleLabel.text = "Feriados \(year)"
         tableView.dataSource = self
+        tableView.delegate = self
         
         loadCalendar()
         // Do any additional setup after loading the view.
@@ -43,7 +44,7 @@ class ViewController: UIViewController {
     }
     
     func loadCalendar () {
-        var url = URL(string: "https://brasilapi.com.br/api/feriados/v1/\(year)")
+        let url = URL(string: "https://brasilapi.com.br/api/feriados/v1/\(year)")
         
         if let url = url {
             
@@ -79,7 +80,6 @@ class ViewController: UIViewController {
             ScreenLoad.startLoad(self.tableView)
         }
     }
-    
 }
 
 extension ViewController: UITableViewDataSource {
@@ -97,4 +97,10 @@ extension ViewController: UITableViewDataSource {
         return cell
     }
     
+}
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
